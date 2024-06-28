@@ -16,9 +16,9 @@ DistanceCalculator * DistanceCalculator::GetInstance() {
 }
 
 double DistanceCalculator::Distance(const Point &from, const Point &to) {
-    double lat1 = GetRadians((from.Latitude() + to.Latitude()) / 2);
-    double dx = 111.3 * cos(lat1) * (from.Longitude() - to.Longitude());
-    double dy = 111.3 * (from.Latitude() - to.Latitude());
+    const double lat1 = GetRadians((from.Latitude() + to.Latitude()) / 2);
+    const double dx = 111.3 * cos(lat1) * (from.Longitude() - to.Longitude());
+    const double dy = 111.3 * (from.Latitude() - to.Latitude());
     return sqrt(dx * dx + dy * dy);
 }
 

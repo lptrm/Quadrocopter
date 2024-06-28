@@ -11,8 +11,8 @@ class Point {
 public:
     Point(double latitue, double longitude, std::string name = "");
     void Set(double latitude, double longitude, std::string name = "");
-    double Latitude() const;
-    double Longitude() const;
+    [[nodiscard]] double Latitude() const;
+    [[nodiscard]] double Longitude() const;
     std::string Name();
     void Print() const;
 private:

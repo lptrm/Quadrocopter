@@ -16,7 +16,7 @@ public:
     ~PointList();
     void Add(Point& point);
     void Print() const;
-    double GetDistance() const;
+    [[nodiscard]] double GetDistance() const;
 private:
     std::vector<Point*> m_points;
 };
