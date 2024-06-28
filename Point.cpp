@@ -13,7 +13,7 @@ Point::Point(const double latitue, const double longitude, std::string name) : m
 void Point::Set(const double latitude, const double longitude, std::string name) {
     this->m_latitude = latitude;
     this->m_longitude = longitude;
-    if (name != this->m_name && !name.empty() && !this->m_name.empty()) {
+    if (name != this->m_name && !name.empty()) {
         this->m_name = std::move(name);
     }
 }
